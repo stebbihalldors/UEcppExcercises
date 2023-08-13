@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "RotatorComponent.h"
 #include "RotationActor.generated.h"
 
 UCLASS()
@@ -15,12 +16,6 @@ public:
 	// Sets default values for this actor's properties
 	ARotationActor();
 
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+		URotatorComponent* RotatorComponent;
 };

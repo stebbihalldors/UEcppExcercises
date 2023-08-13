@@ -8,20 +8,6 @@ ARotationActor::ARotationActor()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	RotatorComponent = CreateDefaultSubobject<URotatorComponent>(TEXT("Rotator"));
 
 }
-
-// Called when the game starts or when spawned
-void ARotationActor::BeginPlay()
-{
-	Super::BeginPlay();
-	
-}
-
-// Called every frame
-void ARotationActor::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-}
-
