@@ -8,6 +8,13 @@
 - Add rotation based on the speed of rotation, in the TickComponent method override in the ActorComponet.
 - Watch the Actor rotate!
 
+### Video: </br>
+
+
+https://github.com/stebbihalldors/UEcppExcercises/assets/9976716/f6d84157-888d-420a-9a15-bdf9c92c06e5
+
+
+
 ## Exercise 2 - The Spawner
 - Create an AActor class that will be your spawning actor—use a cube or other primitive component to make it visible.
 - Make a manager object. Classes that can be used for this include AInfo, UWorldSubsystem, and AGameMode, with varied requirements between the three.
