@@ -13,5 +13,10 @@ UCLASS()
 class UECPPEXERCISES_API AUEcppExercisesGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-	
+
+private:
+	//TArray
+public:
+	UFUNCTION()
+	void SpawnStatue(const FVector Location);
 };

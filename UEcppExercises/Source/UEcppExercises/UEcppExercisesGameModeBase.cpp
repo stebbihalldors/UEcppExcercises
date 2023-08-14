@@ -3,3 +3,8 @@
 
 #include "UEcppExercisesGameModeBase.h"
 
+void AUEcppExercisesGameModeBase::SpawnStatue(const FVector Location)
+{
+	
+}
+
