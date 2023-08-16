@@ -15,8 +15,13 @@ class UECPPEXERCISES_API AUEcppExercisesGameModeBase : public AGameModeBase
 	GENERATED_BODY()
 
 private:
-	//TArray
+	UPROPERTY()
+		AStatueManager* StatueManager;
 public:
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+		TSoftClassPtr<AStatueActor> StatueClass;
+
+	virtual void InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage) override;
 	UFUNCTION()
 	void SpawnStatue(const FVector Location);
 };
