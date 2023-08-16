@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "Statue/StatueManager.h"
+#include "Statue/StatueActor.h"
 #include "UEcppExercisesGameModeBase.generated.h"
 
 /**
