@@ -4,8 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-#include "Statue/StatueManager.h"
-#include "Statue/StatueActor.h"
+//#include "Statue/StatueManager.h"
+//#include "Statue/StatueActor.h"
 #include "UEcppExercisesGameModeBase.generated.h"
 
 /**
@@ -17,13 +17,13 @@ class UECPPEXERCISES_API AUEcppExercisesGameModeBase : public AGameModeBase
 	GENERATED_BODY()
 
 private:
-	UPROPERTY()
-		AStatueManager* StatueManager;
+//	UPROPERTY()
+//		AStatueManager* StatueManager;
 public:
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-		TSoftClassPtr<AStatueActor> StatueClass;
+//	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+//		TSoftClassPtr<AStatueActor> StatueClass;
 
-	virtual void InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage) override;
+	//virtual void InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage) override;
 	UFUNCTION()
 	void SpawnStatue(const FVector Location);
 };
