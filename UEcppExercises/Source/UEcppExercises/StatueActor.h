@@ -11,16 +11,15 @@ class UECPPEXERCISES_API AStatueActor : public AActor
 {
 	GENERATED_BODY()
 	
-public:	
-	// Sets default values for this actor's properties
-	AStatueActor();
-
 protected:
-	// Called when the game starts or when spawned
+	//UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	//URandomMoveComponent* RandomMoveComponent;
+
 	virtual void BeginPlay() override;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+public:
+	AStatueActor();
 
+	//UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
+	//void Pickup(); virtual void Pickup_Implementation() override;
 };
