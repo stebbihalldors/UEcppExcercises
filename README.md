@@ -28,6 +28,13 @@ https://github.com/stebbihalldors/UEcppExcercises/assets/9976716/f6d84157-888d-4
 - In the Spawn method in the manager, use SpawnActor or other gameplay function to create a new actor and add it to the TArray of actors each time the Spawn method is called,
   then move the newly spawned actor to the supplied Location.
 
+### Video: </br>
+
+
+https://github.com/stebbihalldors/UEcppExcercises/assets/9976716/2efafe94-bb56-4bb4-9462-f063cd4d755b
+
+
+
 ## Exercise 3 - The Interactor
 
 - Create an ActorComponent that will collect potential interactive objects. Add this to your player.
