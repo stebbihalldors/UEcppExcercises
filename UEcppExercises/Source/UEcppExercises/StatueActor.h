@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "StatueHelpers.h"
 #include "StatueActor.generated.h"
 
 UCLASS()
@@ -19,6 +20,10 @@ protected:
 
 public:
 	AStatueActor();
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	float Radius = 1000.f;
+
 
 	//UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 	//void Pickup(); virtual void Pickup_Implementation() override;
