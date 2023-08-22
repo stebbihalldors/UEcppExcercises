@@ -44,3 +44,6 @@ https://github.com/stebbihalldors/UEcppExcercises/assets/9976716/2efafe94-bb56-4
 - Pick the most relevant of the collected possible targets and safely call the interface on that target.
 - Implement the same interface on a Blueprint actor.
 
+### Video: </br>
+
+
