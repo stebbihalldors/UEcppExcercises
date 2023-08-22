@@ -23,3 +23,10 @@ void AStatueActor::BeginPlay()
 	//Owner->SetActorLocation(RandomLocation);
 	
 }
+
+void AStatueActor::Pickup_Implementation()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Green, FString("Wohoo, used the interface!"));
+	//todo: add score
+	Destroy();
+}

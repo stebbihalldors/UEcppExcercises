@@ -5,10 +5,11 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "StatueHelpers.h"
+#include "PickupInterface.h"
 #include "StatueActor.generated.h"
 
 UCLASS()
-class UECPPEXERCISES_API AStatueActor : public AActor
+class UECPPEXERCISES_API AStatueActor : public AActor, public IPickupInterface
 {
 	GENERATED_BODY()
 	
@@ -25,6 +26,6 @@ public:
 	float Radius = 1000.f;
 
 
-	//UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
-	//void Pickup(); virtual void Pickup_Implementation() override;
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
+	void Pickup(); virtual void Pickup_Implementation() override;
 };
