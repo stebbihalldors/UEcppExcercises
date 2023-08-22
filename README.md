@@ -47,3 +47,7 @@ https://github.com/stebbihalldors/UEcppExcercises/assets/9976716/2efafe94-bb56-4
 ### Video: </br>
 
 
+https://github.com/stebbihalldors/UEcppExcercises/assets/9976716/ac3addda-bd42-4fbb-8fc8-19e26c2f2088
+
+
+
