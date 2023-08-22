@@ -3,14 +3,10 @@
 
 #include "InteractComponent.h"
 
-// Sets default values for this component's properties
 UInteractComponent::UInteractComponent()
 {
-	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
-	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
-
-	// ...
+	TraceSphere = FCollisionShape::MakeSphere(Radius);
 }
 
 
@@ -18,9 +14,7 @@ UInteractComponent::UInteractComponent()
 void UInteractComponent::BeginPlay()
 {
 	Super::BeginPlay();
-
-	// ...
-	
+	Owner = GetOwner();
 }
 
 
@@ -29,6 +23,19 @@ void UInteractComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAc
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	// ...
+	TArray<FOverlapResult> CandidateActors;
+	
+	auto bBlockingHit = GetWorld()->OverlapMultiByChannel(CandidateActors, Owner->GetActorLocation(), FQuat::Identity, ECollisionChannel::ECC_GameTraceChannel1, TraceSphere);
+	
+	for (int i = 0; i < CandidateActors.Num(); i++)
+	{
+		// Call the interface on each collected actor
+		AActor* ActorReference = CandidateActors[i].GetActor();
+
+		if (ActorReference->Implements<UPickupInterface>())
+		{
+			IPickupInterface::Execute_Pickup(ActorReference);
+		}
+	}
 }
 

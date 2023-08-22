@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "PickupInterface.h"
 #include "InteractComponent.generated.h"
 
 
@@ -12,16 +13,21 @@ class UECPPEXERCISES_API UInteractComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
-public:	
-	// Sets default values for this component's properties
-	UInteractComponent();
+private:	
+	FCollisionShape TraceSphere;
+	const AActor* Owner;
 
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
 public:	
-	// Called every frame
+	// Called every 
+	UPROPERTY(BlueprintReadOnly, EditAnywhere)
+	float Radius = 100.f; //Cant edit in editor because its created in the constructor ?
+
+	UInteractComponent();
+
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 		
